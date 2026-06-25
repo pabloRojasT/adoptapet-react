@@ -35,3 +35,19 @@ en app.jsx renderizo los componentes de ListaMascotas
 
 modificacion: no modifique nada
 
+etapa 4.
+
+prompt: crear botones o un selector para filtrar por la especie: “Todas”, “Perro”, “Gato”, “Otro”. 
+En App.jsx, usa useState para guardar el filtro seleccionado y un campo de búsqueda por nombre. 
+Aplica ambos filtros sobre el array antes de pasarlo a ListaMascotas. 
+Usa renderizado condicional para mostrar el mensaje “No hay mascotas que coincidan” cuando el resultado quede vacío. 
+El campo de búsqueda debe ser un componente controlado (su valor vive en el estado de React). 
+Valida y normaliza el texto de búsqueda (recorta espacios y limita el largo) antes de usarlo,
+ para no confiar ciegamente en la entrada del usuario.
+
+ utilidad: muy util debido a que en filtro especie muestra botones para seleccionar el filtro de especie, filtra las mascotas
+ segun la especie seleccionada y guarda el texto del campo de busqueda
+
+ modificacion: no le modifique nada al resultadoo
+ 
+

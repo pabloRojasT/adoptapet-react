@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import ListaMascotas from "./components/ListaMascotas";
+import FiltroEspecie from "./components/FiltroEspecie";
 
 const datosMascotas = [
   {
@@ -32,10 +33,32 @@ const datosMascotas = [
 ];
 
 const App = () => {
+  const [filtro, setFiltro] = useState("Todas");
+  const [busqueda, setBusqueda] = useState("");
+
+  // Filtrar las mascotas según el filtro y la búsqueda
+  const mascotasFiltradas = datosMascotas.filter((mascota) => {
+    const coincideEspecie = filtro === "Todas" || mascota.especie.toLowerCase() === filtro.toLowerCase();
+    const coincideBusqueda =
+      mascota.nombre.toLowerCase().includes(busqueda.trim().toLowerCase());
+    return coincideEspecie && coincideBusqueda;
+  });
+
   return (
     <div>
       <h1>Lista de Mascotas</h1>
-      <ListaMascotas mascotas={datosMascotas} />
+      <FiltroEspecie filtro={filtro} setFiltro={setFiltro} />
+      <input
+        type="text"
+        placeholder="Buscar por nombre"
+        value={busqueda}
+        onChange={(e) => setBusqueda(e.target.value.slice(0, 50))} // Limitar el largo a 50 caracteres
+      />
+      {mascotasFiltradas.length > 0 ? (
+        <ListaMascotas mascotas={mascotasFiltradas} />
+      ) : (
+        <p>No hay mascotas que coincidan</p>
+      )}
     </div>
   );
 };
