@@ -1,0 +1,11 @@
+etapa 1:
+
+prompt: en base al contexo que es "un refugio de animales quiere reemplazar su mural impreso por un directorio digital interactivo de mascotas en adopcion, exhibido en una
+pantalla de la recepcion. El equipo del refugio te entrega el listado de mascotas y te pide una aplicacion web SPA en REACT, que sea simple y ordenada al igual que segura, 
+que permite ver mascotas distinguir su especie y resalta los casos en 
+adopcion urgente." en base a los elementos de REACT que son componente, JSX, props, estado(use state), renderizado de listas (.map + key)
+y renderizado condicional puedes decirme para cada uno ¿donde lo uso en este problema? y ¿porque es adecuado?
+
+utilidad: la respuesta de la ia fue muy util debido a que me entrega las respuestas para cada elemento que se encontraba en la tabla en base al contexto
+
+modificacion: no modifique nada 
