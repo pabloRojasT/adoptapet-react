@@ -9,3 +9,18 @@ y renderizado condicional puedes decirme para cada uno ¿donde lo uso en este pr
 utilidad: la respuesta de la ia fue muy util debido a que me entrega las respuestas para cada elemento que se encontraba en la tabla en base al contexto
 
 modificacion: no modifique nada 
+
+etapa 2: 
+
+prompt: El componente recibe por props: nombre, raza, edad, especie, descripcion, caracteristicas 
+y muestra la información de forma visual y ordenada
+aplica un estilo diferenciado según la especie (un color/etiqueta distinto para Perro, Gato, Otro). 
+Define los tipos de las props con PropTypes (o documenta claramente cada prop) y entrega valores por defecto para evitar errores
+ cuando falte un dato. Renderiza el texto siempre como contenido JSX normal. 
+ No uses dangerouslySetInnerHTML. No dejes credenciales, claves ni datos sensibles escritos en el código.
+
+ utilidad: fue demasiado util debido a que me permitio poder crear el mastercard en base a los contenidos necesarios que necesitaba este
+ al igual que crear un css para su estilo
+
+ modificacion: no modifique nada
+
