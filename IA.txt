@@ -24,3 +24,14 @@ Define los tipos de las props con PropTypes (o documenta claramente cada prop) y
 
  modificacion: no modifique nada
 
+etapa 3:
+
+prompt: Recorre el array con .map() y renderiza un MascotaCard por cada mascota. 
+Asigna correctamente la prop key usando el id de cada elemento (no uses el índice del array).
+ En App.jsx, renderiza ListaMascotas pasándole los datos importados.
+
+utilidad: muy util debido a que me permitio colocar los archivos de listaMascotas.jsx de forma limpia y bien estructurada al igual que
+en app.jsx renderizo los componentes de ListaMascotas
+
+modificacion: no modifique nada
+
