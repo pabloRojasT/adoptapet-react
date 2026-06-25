@@ -49,5 +49,13 @@ Valida y normaliza el texto de búsqueda (recorta espacios y limita el largo) an
  segun la especie seleccionada y guarda el texto del campo de busqueda
 
  modificacion: no le modifique nada al resultadoo
- 
+
+ etapa 5:
+
+ prompt: Resalta visualmente los elementos con adopcionUrgente: true (por ejemplo, una etiqueta “URGENTE” o un borde distinto). 
+ Agrega un contador que muestre cuántas mascotas tienen adopción urgente. 
+ Verifica que toda la app corre sin errores ni warnings en consola.
+
+ utilidad: fue muy util debido a que Se agregó la prop adopcionUrgente a MascotaCard, se añadió un borde rojo y una etiqueta "URGENTE" para las mascotas con adopcionUrgente: true.
+ Se calculan las mascotas urgentes en App.jsx y se muestra el número en la interfaz, entre otras cosas.
 

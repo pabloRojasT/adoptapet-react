@@ -11,6 +11,7 @@ const datosMascotas = [
     especie: "Perro",
     descripcion: "Un perro muy amigable.",
     caracteristicas: "Juguetón, leal, activo",
+    adopcionUrgente: true,
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ const datosMascotas = [
     especie: "Gato",
     descripcion: "Un gato muy curioso.",
     caracteristicas: "Independiente, cariñoso, ágil",
+    adopcionUrgente: false,
   },
   {
     id: 3,
@@ -29,6 +31,7 @@ const datosMascotas = [
     especie: "Otro",
     descripcion: "Un canario que canta mucho.",
     caracteristicas: "Pequeño, alegre, ruidoso",
+    adopcionUrgente: true,
   },
 ];
 
@@ -44,6 +47,9 @@ const App = () => {
     return coincideEspecie && coincideBusqueda;
   });
 
+  // Contador de mascotas con adopción urgente
+  const urgentes = mascotasFiltradas.filter((mascota) => mascota.adopcionUrgente).length;
+
   return (
     <div>
       <h1>Lista de Mascotas</h1>
@@ -54,6 +60,7 @@ const App = () => {
         value={busqueda}
         onChange={(e) => setBusqueda(e.target.value.slice(0, 50))} // Limitar el largo a 50 caracteres
       />
+      <p>Mascotas con adopción urgente: {urgentes}</p>
       {mascotasFiltradas.length > 0 ? (
         <ListaMascotas mascotas={mascotasFiltradas} />
       ) : (

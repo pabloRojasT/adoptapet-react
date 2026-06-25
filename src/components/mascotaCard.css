@@ -18,6 +18,16 @@
     background-color: #f8d7da; /* Rojo claro */
   }
   
-  .mascota-card h2 {
-    margin-top: 0;
+  .mascota-card.urgente {
+    border: 2px solid red; /* Borde rojo para urgentes */
+  }
+  
+  .urgente-label {
+    display: inline-block;
+    background-color: red;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-bottom: 8px;
   }

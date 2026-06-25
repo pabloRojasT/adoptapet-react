@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./mascotaCard.css";
 
-const MascotaCard = ({ nombre, raza, edad, especie, descripcion, caracteristicas }) => {
+const MascotaCard = ({ nombre, raza, edad, especie, descripcion, caracteristicas, adopcionUrgente }) => {
   // Función para determinar el estilo según la especie
   const getEspecieClase = (especie) => {
     switch (especie.toLowerCase()) {
@@ -16,7 +16,8 @@ const MascotaCard = ({ nombre, raza, edad, especie, descripcion, caracteristicas
   };
 
   return (
-    <div className={getEspecieClase(especie)}>
+    <div className={`${getEspecieClase(especie)} ${adopcionUrgente ? "urgente" : ""}`}>
+      {adopcionUrgente && <span className="urgente-label">URGENTE</span>}
       <h2>{nombre}</h2>
       <p><strong>Raza:</strong> {raza}</p>
       <p><strong>Edad:</strong> {edad}</p>
@@ -35,6 +36,7 @@ MascotaCard.propTypes = {
   especie: PropTypes.string.isRequired,
   descripcion: PropTypes.string.isRequired,
   caracteristicas: PropTypes.string.isRequired,
+  adopcionUrgente: PropTypes.bool, // Nueva prop
 };
 
 // Valores por defecto para las props
@@ -45,6 +47,7 @@ MascotaCard.defaultProps = {
   especie: "Otro",
   descripcion: "Sin descripción",
   caracteristicas: "Sin características",
+  adopcionUrgente: false, // Valor por defecto
 };
 
 export default MascotaCard;
